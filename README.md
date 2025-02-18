@@ -1,5 +1,5 @@
 # A weakly and self-supervised learning approach for semantic segmentation of land cover in satellite images with National Forest Inventory data
-We used data for the Portuguese National Forest Invetory (NFI) as sparse labels to train a ConvNext-V2 model in a weakly supervised fashion. We explored the use of a self-supervised pretrained Masked Autoencoder (MAE) to improve the weakly supervised model's semantic segmentation accuracy.
+We used data from the Portuguese National Forest Invetory (NFI) as sparse labels to train a ConvNext-V2 model in a weakly supervised fashion. We explored the use of a self-supervised pretrained Masked Autoencoder (MAE) to improve the weakly supervised model's semantic segmentation accuracy.
 
 
 ### ConvNext-V2 U-Net
