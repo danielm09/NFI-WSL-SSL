@@ -9,7 +9,7 @@ def trainWSLModel(model, train_loader, test_loader, optimizer, criterion, test_e
     """
     Start model training.
 
-    Paramters:
+    Parameters:
     model: pytorch model;
     train_loader: DataLoader object with training data;
     test_loader: DataLoader object with test data (required if test_eval=True, otherwise parse None);
@@ -20,7 +20,7 @@ def trainWSLModel(model, train_loader, test_loader, optimizer, criterion, test_e
     log_to_wandb: boolean. determines whether run details should be logged to wandb;
     wandb_proj: wandb project name;
     run_config: dictionary with configurations of the current run (must have a least an 'epochs' key);
-    save: boolean. determines whether to save the model after all epochs.
+    save: boolean. determines whether to save the model at the end of all epochs.
 
     Returns: None
     """
@@ -148,6 +148,17 @@ def evaluate(model, dataloader, criterion, mask_pixel=20):
 def trainMAE(model, train_loader, optimizer, mask_ratio, scheduler=None, log_to_wandb=True, wandb_proj=None, run_config=None, save=True):
     """
     Runs the Self-Supervised Learning MAE pretraining.
+
+    Parameters:
+    model: pytorch model;
+    train_loader: DataLoader object with training data;
+    optimizer: pytorch optimizer;
+    mask_ratio: ratio of masked patches;
+    scheduler: learning rate scheduler;
+    log_to_wandb: boolean. defines whether to log run details to wandb;
+    wandb_proj: wand project name;
+    run_config: dictionary with run configs;
+    save: boolean. defines whether to save the model after training.
     """
 
     if log_to_wandb:
