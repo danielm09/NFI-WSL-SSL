@@ -22,4 +22,20 @@ to be added
 This repository contains code derived from [MMEarth-train](https://github.com/vishalned/MMEarth-train) and [ConvNext-V2](https://github.com/facebookresearch/ConvNeXt-V2/tree/main) repositories.
 
 ## Citation
-Coming soon
+Moraes, D., Campagnolo, M. L., & Caetano, M. (2025). A Weakly Supervised and Self-Supervised Learning Approach for Semantic Segmentation of Land Cover in Satellite Images with National Forest Inventory Data. Remote Sensing, 17(4), 711. https://doi.org/10.3390/rs17040711
+
+BibTeX
+```
+@Article{rs17040711,
+        AUTHOR = {Moraes, Daniel and Campagnolo, Manuel L. and Caetano, Mário},
+        TITLE = {A Weakly Supervised and Self-Supervised Learning Approach for Semantic Segmentation of Land Cover in Satellite Images with National Forest Inventory Data},
+        JOURNAL = {Remote Sensing},
+        VOLUME = {17},
+        YEAR = {2025},
+        NUMBER = {4},
+        ARTICLE-NUMBER = {711},
+        URL = {https://www.mdpi.com/2072-4292/17/4/711},
+        ISSN = {2072-4292},
+        DOI = {10.3390/rs17040711}
+}
+```
