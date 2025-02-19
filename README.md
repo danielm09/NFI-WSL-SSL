@@ -9,7 +9,7 @@ We used a U-Net model based on the ConvNext-V2 architecture, a modernized convol
 ### Weakly Supervised Learning
 <img src="Figure_WSL.png" width="80%">
 
-As opposed to traditional strongly supervised learnin, which requires fully annotated image chips (b), we used point-based NFI data to derive sparse labels (c). We expanded the point label to a 3x3 neighbourhood using a homogeneity criterion. Then, we used these partial labels to train our models.
+As opposed to traditional strongly supervised learning, which requires fully annotated image chips (b), we used point-based NFI data to derive sparse labels (c). We expanded the point label to a 3x3 neighbourhood using a homogeneity criterion. Then, we used these partial labels to train our models.
 ### Masked Autoencoder
 <img src="Figure_MAE.png" width="80%">
 
