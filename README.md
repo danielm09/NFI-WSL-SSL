@@ -16,11 +16,26 @@ As opposed to traditional strongly supervised learnin, which requires fully anno
 A self-supervised masked autoencoder was trained on over 65k 56x56 Sentinel-2 image chips spread across our study area. The MAE was designed to reconstruct masked image patches which contained the Sentinel-2 time series stacked into 181 bands. Then, we transferred the MAE encoder weights to the ConvNext-V2 U-Net and fine-tuned it with the WSL approach.
 
 ## Installation
-Install via pip
-´´´
+Create a new conda virtual environment
+```
+conda create -n nfi_wsl_ssl python=3.12 -y
+conda activate nfi_wsl_ssl
+```
+
+Clone this repository
+```
+git clone https://github.com/danielm09/NFI-WSL-SSL.git
+```
+
+Install requirements via pip.
+- Change directory `cd NFI-WSL-SSL`
+
+```
 pip install -r requirements.txt
-´´´
+```
 *Tested on Ubuntu 22.04*
+
+
 
 ## Acknowledgements
 This repository contains code derived from [MMEarth-train](https://github.com/vishalned/MMEarth-train) and [ConvNext-V2](https://github.com/facebookresearch/ConvNeXt-V2/tree/main) repositories.
