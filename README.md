@@ -16,7 +16,11 @@ As opposed to traditional strongly supervised learnin, which requires fully anno
 A self-supervised masked autoencoder was trained on over 65k 56x56 Sentinel-2 image chips spread across our study area. The MAE was designed to reconstruct masked image patches which contained the Sentinel-2 time series stacked into 181 bands. Then, we transferred the MAE encoder weights to the ConvNext-V2 U-Net and fine-tuned it with the WSL approach.
 
 ## Installation
-to be added
+Install via pip
+´´´
+pip install -r requirements.txt
+´´´
+*Tested on Ubuntu 22.04*
 
 ## Acknowledgements
 This repository contains code derived from [MMEarth-train](https://github.com/vishalned/MMEarth-train) and [ConvNext-V2](https://github.com/facebookresearch/ConvNeXt-V2/tree/main) repositories.
