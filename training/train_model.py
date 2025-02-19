@@ -90,7 +90,7 @@ def trainWSLModel(model, train_loader, test_loader, optimizer, criterion, test_e
         #output folder is models/saved_models
         out_folder = "../models/saved_models/" #this is a relative path, considering the function will be called from the notebook
         #the model name requires the following dictionary structure
-        model_name = f"ModelWSL_{run_config['architecture']}_depths{run_config['depths']}_dims{run_config['dims']}_batch{run_config['batch_size']}_lr{str(run_config['learning_rate'])[2:]}_Aug{run_config['augmentations']}_{run_config['optimizer']}_{run_config['criterion']}.pt"
+        model_name = f"ModelWSL_{run_config['architecture']}_depths{run_config['depths'].replace(', ','-')}_dims{run_config['dims'].replace(', ','-')}_batch{run_config['batch_size']}_lr{str(run_config['learning_rate'])[2:]}_Aug{run_config['augmentations']}_{run_config['optimizer']}_{run_config['criterion']}.pt"
         torch.save(model, out_folder + model_name) #saves model after last epoch
 
     #finishes wandb run
@@ -207,7 +207,7 @@ def trainMAE(model, train_loader, optimizer, mask_ratio, scheduler=None, log_to_
         #output folder is models/saved_models
         out_folder = "../models/saved_models/" #this is a relative path, considering the function will be called from the notebook
         #the model name requires the following dictionary structure
-        model_name = f"MAEModel_{run_config['architecture']}_depths{run_config['depths']}_dims{run_config['dims']}_batch{run_config['batch_size']}_lr{str(run_config['learning_rate'])[2:]}_Aug{run_config['augmentations']}_{run_config['optimizer']}_{run_config['criterion']}.pt"
+        model_name = f"MAEModel_{run_config['architecture']}_depths{run_config['depths'].replace(', ','-')}_dims{run_config['dims'].replace(', ','-')}_batch{run_config['batch_size']}_lr{str(run_config['learning_rate'])[2:]}_Aug{run_config['augmentations']}_{run_config['optimizer']}_{run_config['criterion']}.pt"
         torch.save(model.state_dict(), out_folder + model_name) #saves model (parameters only) after last epoch
 
     #finishes wandb run
