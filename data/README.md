@@ -13,6 +13,8 @@ Or choose specific datasets to download
 python download_data.py train_wsl test_wsl
 ```
 > *Options: train_wsl, test_wsl, train_mae*
+>
+> Make sure download_data.py is called from the 'data' folder
 
 # Alternative
 Download the data directly from AWS S3.
