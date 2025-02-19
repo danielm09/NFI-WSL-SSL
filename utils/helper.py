@@ -17,7 +17,7 @@ def keep_encoder_only(ckpt):
 
 def remap_checkpoint_keys(ckpt):
     """
-    This function helps harmonize saved weights dictionary's key names in order to
+    This function helps harmonize key names in saved weights dictionary in order to
     transfer the weights to another model.
     """
 
