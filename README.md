@@ -35,6 +35,9 @@ pip install -r requirements.txt
 ```
 *Tested on Ubuntu 22.04*
 
+## Data
+Check [Download data](https://github.com/danielm09/NFI-WSL-SSL/blob/main/data/README.md) for instructions to download the data.
+> *We are currently providing the pre-processed data only.*
 
 
 ## Acknowledgements
