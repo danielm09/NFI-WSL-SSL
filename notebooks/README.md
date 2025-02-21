@@ -4,13 +4,13 @@
 Use this notebook to create a pretrained masked autoencoder model. 
 
 ## wsl_training.ipynb
-Use this notebook to train the semantic segmentation models. It can be used to train the model from scratch (baseline model) or to finetune the pretrained model.
+Use this notebook to train the semantic segmentation models. It can be used to train the model from scratch (baseline model) and to finetune the pretrained model.
 
 ## wsl_hyperparameter_search.ipynb
 Use this notebook to perform a hyperparameter search for the semantic segmentation model.
 
 ## visualize_data.ipynb
-The notebook allows visualizing and inspect the input data (size, shape, spectral values, labels etc).
+The notebook allows visualizing and inspecting the input data (size, shape, spectral values, labels etc).
 
 # Recommended workflow
 1. Run `ssl_mae_pretraining.ipynb` and save the pretrained model
