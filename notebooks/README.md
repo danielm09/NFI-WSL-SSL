@@ -1,8 +1,8 @@
 # Notebook descriptions
 | Notebook   | Description         |
 |------------|---------------------|
-| **ssl_mae_pretraining.ipynb** | Use this notebook to train the semantic segmentation models. It can be used to train the model from scratch (baseline model) and to finetune the pretrained model |
-| **wsl_training.ipynb** | Use this notebook to perform a hyperparameter search for the semantic segmentation model |
+| **ssl_mae_pretraining.ipynb** | Use this notebook to train the self-supervised masked autoencoder |
+| **wsl_training.ipynb** | Use this notebook to train the semantic segmentation models. It can be used to train the model from scratch (baseline model) and to finetune the pretrained model |
 | **wsl_hyperparameter_search.ipynb** | Use this notebook to perform a hyperparameter search for the semantic segmentation model |
 | **visualize_data.ipynb** | The notebook allows visualizing and inspecting the input data (size, shape, spectral values, labels etc) |
 
