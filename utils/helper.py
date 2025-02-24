@@ -5,6 +5,11 @@ def keep_encoder_only(ckpt):
     """
     Finds the end of the encoder (encoder.norm.weight) and removes
     all keys that come after it, as they are useless for finetuning.
+
+    Args:
+        ckpt: model checkpoint.
+    Returns:
+        ckpt: modified model checkpoint.
     """
 
     end_index = [i for i,j in enumerate(list(ckpt.keys())) if j=='encoder.norm.weight'][0]
@@ -19,6 +24,11 @@ def remap_checkpoint_keys(ckpt):
     """
     This function helps harmonize key names in saved weights dictionary in order to
     transfer the weights to another model.
+    
+    Args:
+        ckpt: model checkpoint.
+    Returns:
+        ckpt: modified model checkpoint.
     """
 
     ckpt = keep_encoder_only(ckpt)

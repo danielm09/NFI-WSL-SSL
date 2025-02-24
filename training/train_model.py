@@ -9,20 +9,21 @@ def trainWSLModel(model, train_loader, test_loader, optimizer, criterion, test_e
     """
     Start model training.
 
-    Parameters:
-    model: pytorch model;
-    train_loader: DataLoader object with training data;
-    test_loader: DataLoader object with test data (required if test_eval=True, otherwise parse None);
-    optimizer: pytorch optimizer;
-    criterion: loss criterion;
-    test_eval: boolean. If True, computes accuracy metrics for the test set after each training epoch;
-    mask_pixel: pixels equal to mask_pixel will be masked for accuracy evaluation purposes (use it to mask unlabeled pixels);
-    log_to_wandb: boolean. determines whether run details should be logged to wandb;
-    wandb_proj: wandb project name;
-    run_config: dictionary with configurations of the current run (must have a least an 'epochs' key);
-    save: boolean. determines whether to save the model at the end of all epochs.
+    Args:
+        model : pytorch model;
+        train_loader :  DataLoader object with training data;
+        test_loader : DataLoader object with test data (required if test_eval=True, otherwise parse None);
+        optimizer : pytorch optimizer;
+        criterion : loss criterion;
+        test_eval (boolean): if True, computes accuracy metrics for the test set after each training epoch;
+        mask_pixel (int): pixels equal to mask_pixel will be masked for accuracy evaluation purposes (use it to mask unlabeled pixels);
+        log_to_wandb (boolean): determines whether run details should be logged to wandb;
+        wandb_proj (str): wandb project name;
+        run_config (dict): dictionary with configurations of the current run (must have a least an 'epochs' key);
+        save (boolean): determines whether to save the model at the end of all epochs.
 
-    Returns: None
+    Returns:
+        None:
     """
 
     if log_to_wandb:
@@ -101,13 +102,14 @@ def evaluate(model, dataloader, criterion, mask_pixel=20):
     """
     Evaluates model accuracy on test dataset.
 
-    Parameters:
-    model: pytorch model;
-    dataloader: DataLoader object with the test set;
-    criterion: loss criterion;
-    mask_pixel: pixels equal to mask_pixel will be masked for accuracy evaluation purposes (use it to mask unlabeled pixels).
+    Args:
+        model: pytorch model;
+        dataloader: DataLoader object with the test set;
+        criterion: loss criterion;
+        mask_pixel (int): pixels equal to mask_pixel will be masked for accuracy evaluation purposes (use it to mask unlabeled pixels).
 
-    Returns: tuple(average test set loss, test set accuracy)
+    Returns:
+        tuple: (average test set loss, test set accuracy)
     """
 
     model.eval()  # Set the model to evaluation mode
@@ -149,16 +151,19 @@ def trainMAE(model, train_loader, optimizer, mask_ratio, scheduler=None, log_to_
     """
     Runs the Self-Supervised Learning MAE pretraining.
 
-    Parameters:
-    model: pytorch model;
-    train_loader: DataLoader object with training data;
-    optimizer: pytorch optimizer;
-    mask_ratio: ratio of masked patches;
-    scheduler: learning rate scheduler;
-    log_to_wandb: boolean. defines whether to log run details to wandb;
-    wandb_proj: wand project name;
-    run_config: dictionary with run configs;
-    save: boolean. defines whether to save the model after training.
+    Args:
+        model: pytorch model;
+        train_loader: DataLoader object with training data;
+        optimizer: pytorch optimizer;
+        mask_ratio (float): ratio of masked patches;
+        scheduler: learning rate scheduler;
+        log_to_wandb (boolean): defines whether to log run details to wandb;
+        wandb_proj (str): wand project name;
+        run_config (dict): dictionary with run configs;
+        save (boolean): defines whether to save the model after training.
+    
+    Returns:
+        None:
     """
 
     if log_to_wandb:

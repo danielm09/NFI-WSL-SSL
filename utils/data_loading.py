@@ -10,14 +10,14 @@ class WSL_Dataset(Dataset):
         """
         Defines a Dataset object. It will read data from a hdf5 file.
 
-        Parameters:
-        hdf5_path: string containing the path pointing to hdf5 file (file should have keys 'crops' and 'labels');
-        bands_idxs: array with indices of bands, if one wants to use a subset of the bands;
-        transform: transforms to be applied to the data;
-        standardize: whether the data must be standardized (if True, one should provide means_np and stds_np);
-        means_np: numpy array with pre-calculated means of each band (order should match crops bands order);
-        stds_np: numpy array with pre-calculated stds of each band (order should match crops bands order);
-        downsample_classes: array with labels of classes to be downsampled.
+        Args:
+            hdf5_path (str): string containing the path pointing to hdf5 file (file should have keys 'crops' and 'labels');
+            bands_idxs (list): array with indices of bands, if one wants to use a subset of the bands;
+            transform: transforms to be applied to the data;
+            standardize (boolean): whether the data must be standardized (if True, one should provide means_np and stds_np);
+            means_np (ndarray): numpy array with pre-calculated means of each band (order should match crops bands order);
+            stds_np (ndarray): numpy array with pre-calculated stds of each band (order should match crops bands order);
+            downsample_classes (list): array with labels of classes to be downsampled.
         """
         self.hdf5_path = hdf5_path
         self.h5file = h5py.File(hdf5_path, 'r') #"crops" (n, b, w, h), "labels" (n, w, h)
@@ -92,13 +92,13 @@ class SSL_Dataset(Dataset):
         """
         Defines a Dataset object. It will read data from a hdf5 file.
 
-        Parameters:
-        hdf5_path: string containing the path pointing to hdf5 file (file should have keys 'crops');
-        bands_idxs: array with indices of bands, if one wants to use a subset of the bands;
-        transform: transforms to be applied to the data;
-        standardize: whether the data must be standardized (if True, one should provide means_np and stds_np);
-        means_np: numpy array with pre-calculated means of each band (order should match crops bands order);
-        stds_np: numpy array with pre-calculated stds of each band (order should match crops bands order).
+        Args:
+            hdf5_path (str): string containing the path pointing to hdf5 file (file should have keys 'crops');
+            bands_idxs (list): array with indices of bands, if one wants to use a subset of the bands;
+            transform: transforms to be applied to the data;
+            standardize (boolean): whether the data must be standardized (if True, one should provide means_np and stds_np);
+            means_np (ndarray): numpy array with pre-calculated means of each band (order should match crops bands order);
+            stds_np (ndarray): numpy array with pre-calculated stds of each band (order should match crops bands order).
         """
 
         self.hdf5_path = hdf5_path
