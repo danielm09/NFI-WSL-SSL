@@ -77,8 +77,8 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Define which datasets to download")
     parser.add_argument(
         "datasets", 
-        choices=["train_wsl","test_wsl","train_mae"], 
-        nargs="+",
+        choices=["train_wsl","test_wsl","train_mae", []], 
+        nargs="*",
         help="Specify which datasets should be downloaded (train_wsl, test_wsl, train_mae)"
         )
 
