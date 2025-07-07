@@ -8,7 +8,7 @@
 
 # Recommended workflow
 1. Run `ssl_mae_pretraining.ipynb` and save the pretrained model
-2. Run `wsl_hyperparameter_search.ipynb` to identify the best set o hyperparameters
+2. Run `wsl_hyperparameter_search.ipynb` to identify the best set of hyperparameters
 3. Run `wsl_training.ipynb`  
-   2.1. Run and save the baseline model  
-   2.2. Finetune the pretrained model
+   3.1. Run and save the baseline model  
+   3.2. Finetune the pretrained model
