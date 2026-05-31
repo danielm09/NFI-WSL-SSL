@@ -44,6 +44,10 @@ Our pretrained MAE model can be downloaded from this [link](https://ifn-wsl-ssl-
 
 Instructions on how to load and fine tune the pretrained model can be found in the [wsl_training.ipynb](notebooks/wsl_training.ipynb) notebook.
 
+## Final Map
+
+The final map in GeoTiff format as well as the QGIS layer definition file can be downloaded in this [link](https://ifn-wsl-ssl-data.s3.eu-west-3.amazonaws.com/map.zip)
+
 ## Acknowledgements
 This repository contains code derived from [MMEarth-train](https://github.com/vishalned/MMEarth-train) and [ConvNext-V2](https://github.com/facebookresearch/ConvNeXt-V2/tree/main) repositories.
 
